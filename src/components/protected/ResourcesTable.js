@@ -31,6 +31,18 @@ export default class ResourcesTable extends Component {
       });
   }
 
+  deleteDatabase(db_name){
+    if (window.confirm("Do you really want delete this data store?")) { 
+      let db_ref = firebase.database().ref(db_name)
+      db_ref.remove()
+      this.getData()
+    }
+  }
+
+  showEditor(db_name){
+    this.props.showEditor(db_name)
+  }
+
   render() {
 
   	let databases = this.state.dataStores || []
@@ -39,7 +51,10 @@ export default class ResourcesTable extends Component {
   			<tr key={database.db_name}>
   				<td>{database.db_name}</td>
   				<td><Link target="_blank" to={database.url}>{database.url}</Link></td>
-  				<td>Edit</td>
+          <td><a href="#" onClick={this.showEditor.bind(this, database.db_name)}>Edit</a></td>
+  				<td><a href="#" onClick={this.deleteDatabase.bind(this, database.db_name)}>
+            <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          </a></td>
   			</tr>
   		)
   	})
@@ -54,7 +69,8 @@ export default class ResourcesTable extends Component {
 			        <tr>
 			          <th>DB Name</th>
 			          <th>URL</th>
-			          <th>Edit</th>
+                <th>Edit</th>
+			          <th>Delete</th>
 			         </tr>
 					    </thead>
 					    <tbody>
