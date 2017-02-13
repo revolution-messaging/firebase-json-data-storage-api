@@ -6,14 +6,12 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
-    "auth0-lock": "^10.7.3",
     "bootstrap": "^3.3.7",
     "firebase": "^3.6.1",
     "font-awesome": "^4.7.0",
     "react": "^15.4.0",
     "react-ace": "^4.1.0",
     "react-dom": "^15.4.0",
-    "react-google-login": "^2.5.8",
     "react-router": "^4.0.0-alpha.5"
   },
   "scripts": {
