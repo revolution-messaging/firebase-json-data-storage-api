@@ -59,7 +59,6 @@ Clone down this project to get started, then run
 
 ```
 npm install
-
 ```
 and firebase init. If you do not have the firebase cli install with 
 
