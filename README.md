@@ -3,7 +3,7 @@
 
 ## What is this?
 ---
-The JSON Data Store is a basic utility that is based on [Firebase](www.google.firebase.com)
+The JSON Data Store is a basic utility that is based on [Firebase](https://firebase.google.com/)
 that allows for the quick creation of an endpoint to store JSON. It is designed to allow the load to be placed onto the client for data requests and remove the need for storage of data on wordpress or static sites. The reason we use Firebase over something like S3 is that it the JSON Data Store application allows for live or quick updates to the data.
 
 Writing to the database is restricted to users based on the `@revolutionmessaging` domain in firebase.
